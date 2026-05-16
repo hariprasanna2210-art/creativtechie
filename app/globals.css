@@ -1,0 +1,116 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #061632;
+  --muted: #5d6577;
+  --paper: #fffdfa;
+  --blue: #006df2;
+  --sky: #00a9f4;
+  --yellow: #ffb000;
+  --lime: #21c653;
+  --orange: #ff6a00;
+  --red: #ff2638;
+  --pink: #ec006f;
+  --purple: #6f1fd9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-inter), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #facc15;
+  color: #061632;
+}
+
+.font-display {
+  font-family: var(--font-space), var(--font-inter), system-ui, sans-serif;
+}
+
+.font-pop {
+  font-family: var(--font-poppins), var(--font-inter), system-ui, sans-serif;
+}
+
+.container {
+  width: min(1180px, calc(100% - 32px));
+  margin-inline: auto;
+}
+
+.grain {
+  position: relative;
+}
+
+.grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.08;
+  background-image: radial-gradient(#061632 0.7px, transparent 0.7px);
+  background-size: 14px 14px;
+  mix-blend-mode: multiply;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 24px 70px rgba(23, 19, 33, 0.12);
+  backdrop-filter: blur(18px);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #006df2, #00a9f4, #21c653, #ffb000, #ff2638, #ec006f);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.mesh-bg {
+  background:
+    radial-gradient(circle at 12% 18%, rgba(0, 109, 242, 0.26), transparent 28%),
+    radial-gradient(circle at 85% 16%, rgba(255, 176, 0, 0.32), transparent 24%),
+    radial-gradient(circle at 75% 76%, rgba(236, 0, 111, 0.18), transparent 28%),
+    radial-gradient(circle at 20% 82%, rgba(33, 198, 83, 0.2), transparent 26%),
+    #fffdfa;
+}
+
+.focus-ring:focus-visible {
+  outline: 3px solid rgba(29, 78, 216, 0.35);
+  outline-offset: 4px;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
