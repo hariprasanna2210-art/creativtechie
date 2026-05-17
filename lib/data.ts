@@ -38,6 +38,7 @@ export type Service = {
 };
 
 const image = (id: string) => `https://images.unsplash.com/${id}?auto=format&fit=crop&w=1800&q=82`;
+const pexels = (id: string) => `https://images.pexels.com/photos/${id}/pexels-photo-${id}.jpeg?auto=compress&cs=tinysrgb&w=1800`;
 
 export const services: Service[] = [
   {
@@ -46,8 +47,8 @@ export const services: Service[] = [
     eyebrow: "Flagship websites",
     description: "High-converting websites that feel fast, polished and unmistakably yours.",
     longDescription: "We craft websites with a sharp strategy layer, clean interface systems and production-grade engineering. Every page is built to load quickly, rank locally and guide visitors toward confident action.",
-    image: image("photo-1497366754035-f200968a6e72"),
-    color: "from-[#006df2] via-[#00a9f4] to-[#21c653]",
+    image: pexels("1181675"),
+    color: "bg-[#0077b6]",
     icon: Globe2,
     features: ["Custom UI systems", "Next.js development", "CMS-ready architecture", "Conversion-focused landing pages"],
     benefits: ["Better first impressions", "Higher enquiry quality", "Lower maintenance overhead", "Stronger local SEO signals"],
@@ -65,8 +66,8 @@ export const services: Service[] = [
     eyebrow: "Search growth",
     description: "Local and national SEO that earns visibility without gimmicks.",
     longDescription: "Our SEO work blends technical fixes, useful content and local search signals for Puducherry, Pondicherry, Tamil Nadu and broader India-focused searches.",
-    image: image("photo-1460925895917-afdab827c52f"),
-    color: "from-[#00a9f4] via-[#006df2] to-[#6f1fd9]",
+    image: pexels("265087"),
+    color: "bg-[#22b45a]",
     icon: Search,
     features: ["Technical audits", "Local SEO", "On-page optimization", "Search content planning"],
     benefits: ["More qualified organic leads", "Cleaner site structure", "Better map visibility", "Compounding traffic"],
@@ -84,8 +85,8 @@ export const services: Service[] = [
     eyebrow: "Demand engine",
     description: "Campaigns, funnels and creative systems that turn attention into revenue.",
     longDescription: "We connect paid media, landing pages, analytics and creative testing into one coherent growth loop. The aim is simple: clearer messaging, smarter spend and better follow-up.",
-    image: image("photo-1557804506-669a67965ba0"),
-    color: "from-[#ffb000] via-[#ff2638] to-[#ec006f]",
+    image: pexels("3184465"),
+    color: "bg-[#f4b942]",
     icon: Megaphone,
     features: ["Campaign strategy", "Paid ads", "Landing pages", "Analytics dashboards"],
     benefits: ["Sharper positioning", "More measurable campaigns", "Faster creative learning", "Improved lead flow"],
@@ -103,8 +104,8 @@ export const services: Service[] = [
     eyebrow: "Social momentum",
     description: "Content calendars and creative campaigns that make your brand easier to remember.",
     longDescription: "We turn your expertise, offers and culture into a consistent social presence across Instagram, LinkedIn, Facebook and emerging formats.",
-    image: image("photo-1611162617474-5b21e879e113"),
-    color: "from-[#6f1fd9] via-[#ec006f] to-[#ffb000]",
+    image: pexels("267350"),
+    color: "bg-[#0891c8]",
     icon: Activity,
     features: ["Content calendars", "Reels concepts", "Community prompts", "Performance reviews"],
     benefits: ["Consistent publishing", "More memorable brand voice", "Better campaign rhythm", "Reusable content assets"],
@@ -122,8 +123,8 @@ export const services: Service[] = [
     eyebrow: "Memorable systems",
     description: "Identity design that gives your company a clear visual and verbal signature.",
     longDescription: "From logo direction to color, typography, messaging and launch assets, we build brand systems that remain flexible as your business grows.",
-    image: image("photo-1523726491678-bf852e717f6a"),
-    color: "from-[#ffb000] via-[#ff6a00] to-[#ff2638]",
+    image: pexels("196644"),
+    color: "bg-[#6aa84f]",
     icon: Palette,
     features: ["Logo suites", "Color systems", "Brand voice", "Launch templates"],
     benefits: ["Clearer recognition", "Faster content creation", "Stronger market confidence", "Consistent touchpoints"],
@@ -141,8 +142,8 @@ export const services: Service[] = [
     eyebrow: "Product clarity",
     description: "Interfaces that make complex products feel calm, useful and easy to trust.",
     longDescription: "We design dashboards, SaaS products, mobile flows and web experiences with research-backed structure and polished interaction detail.",
-    image: image("photo-1581291518857-4e27b48ff24e"),
-    color: "from-[#006df2] via-[#6f1fd9] to-[#ec006f]",
+    image: pexels("326503"),
+    color: "bg-[#3f7cac]",
     icon: PenTool,
     features: ["User flows", "Wireframes", "Design systems", "Clickable prototypes"],
     benefits: ["Lower user confusion", "Faster development handoff", "Better product adoption", "Clearer feature priorities"],
@@ -161,7 +162,7 @@ export const services: Service[] = [
     description: "Mobile apps with crisp UX, reliable architecture and launch-ready polish.",
     longDescription: "We build app experiences for startups, service teams and commerce brands, with careful attention to onboarding, retention and maintainable code.",
     image: image("photo-1512941937669-90a1b58e7e9c"),
-    color: "from-[#21c653] via-[#00a9f4] to-[#006df2]",
+    color: "bg-[#8bbf9f]",
     icon: Smartphone,
     features: ["iOS and Android apps", "App prototypes", "API integration", "Push notifications"],
     benefits: ["Stronger customer access", "Better retention loops", "Streamlined operations", "Scalable app foundation"],
@@ -180,7 +181,7 @@ export const services: Service[] = [
     description: "Online stores designed for discovery, trust and smooth checkout.",
     longDescription: "We create commerce experiences for catalog brands, D2C launches and service-led sellers with product storytelling, performance and analytics baked in.",
     image: image("photo-1556742049-0cfed4f6a45d"),
-    color: "from-[#ff6a00] via-[#ffb000] to-[#21c653]",
+    color: "bg-[#d9a441]",
     icon: ShoppingBag,
     features: ["Storefront design", "Payment setup", "Product architecture", "Conversion optimization"],
     benefits: ["Higher checkout confidence", "Cleaner product management", "Faster campaigns", "Better repeat buying"],
@@ -199,7 +200,7 @@ export const services: Service[] = [
     description: "Internal tools and platforms shaped around the way your team actually works.",
     longDescription: "We build tailored dashboards, workflow tools, portals and business systems that remove spreadsheet chaos and improve daily operations.",
     image: image("photo-1515879218367-8466d910aaa4"),
-    color: "from-[#006df2] via-[#21c653] to-[#ffb000]",
+    color: "bg-[#5aa9a8]",
     icon: Code2,
     features: ["Admin portals", "Workflow automation", "Role-based access", "Reporting dashboards"],
     benefits: ["Less manual work", "Better data visibility", "Fewer operational leaks", "Software that fits your team"],
@@ -218,7 +219,7 @@ export const services: Service[] = [
     description: "Cloud architecture and deployment support for fast, stable digital products.",
     longDescription: "We help teams deploy, secure and scale websites, apps and APIs with sensible cloud architecture and monitoring.",
     image: image("photo-1451187580459-43490279c0fa"),
-    color: "from-[#00a9f4] via-[#006df2] to-[#6f1fd9]",
+    color: "bg-[#2f6690]",
     icon: Cloud,
     features: ["Cloud migration", "CI/CD setup", "Monitoring", "Backup strategy"],
     benefits: ["More reliable releases", "Better uptime", "Lower infrastructure confusion", "Room to scale"],
@@ -237,7 +238,7 @@ export const services: Service[] = [
     description: "Security checks and hardening for websites, apps and business systems.",
     longDescription: "We identify practical security risks, improve configurations and help teams adopt safer release and access practices without slowing work down.",
     image: image("photo-1563986768494-4dee2763ff3f"),
-    color: "from-[#ff2638] via-[#ff6a00] to-[#ffb000]",
+    color: "bg-[#76b041]",
     icon: ShieldCheck,
     features: ["Website security audits", "Access reviews", "Hardening", "Monitoring recommendations"],
     benefits: ["Reduced risk exposure", "More trustworthy systems", "Cleaner admin access", "Better recovery readiness"],
@@ -256,7 +257,7 @@ export const services: Service[] = [
     description: "APIs that connect products, data and teams without brittle workarounds.",
     longDescription: "We design and build secure APIs for web apps, mobile apps, automation workflows, dashboards and third-party integrations.",
     image: image("photo-1558494949-ef010cbdcc31"),
-    color: "from-[#6f1fd9] via-[#006df2] to-[#00a9f4]",
+    color: "bg-[#4f8fc0]",
     icon: DatabaseZap,
     features: ["REST APIs", "Webhooks", "Auth flows", "Third-party integrations"],
     benefits: ["Cleaner data flow", "Faster product features", "Reduced manual syncing", "More reliable automations"],
@@ -275,7 +276,7 @@ export const services: Service[] = [
     description: "AI assistants and automations that save time without making your brand feel generic.",
     longDescription: "We design practical AI workflows for support, content, lead qualification, internal search and repetitive operations with thoughtful human checkpoints.",
     image: image("photo-1677442136019-21780ecad995"),
-    color: "from-[#21c653] via-[#00a9f4] to-[#6f1fd9]",
+    color: "bg-[#7abf85]",
     icon: BrainCircuit,
     features: ["AI chat workflows", "Lead automation", "Content systems", "Internal knowledge tools"],
     benefits: ["Less repetitive work", "Faster customer responses", "Better team leverage", "Safer AI adoption"],
@@ -294,7 +295,7 @@ export const services: Service[] = [
     description: "Ongoing support that keeps your website fresh, fast and secure.",
     longDescription: "We handle updates, fixes, performance checks, content changes and improvement ideas so your site stays healthy after launch.",
     image: image("photo-1504384308090-c894fdcc538d"),
-    color: "from-[#21c653] via-[#ffb000] to-[#ff6a00]",
+    color: "bg-[#cfa64a]",
     icon: Wrench,
     features: ["Monthly updates", "Bug fixes", "Speed checks", "Security reviews"],
     benefits: ["Fewer surprises", "Fresh content", "Better uptime", "Longer website life"],
@@ -313,7 +314,7 @@ export const services: Service[] = [
     description: "Content that teaches, earns trust and supports search growth.",
     longDescription: "We plan and create blogs, landing page copy, lead magnets and social content that sound like a real brand with a real point of view.",
     image: image("photo-1499750310107-5fef28a66643"),
-    color: "from-[#ffb000] via-[#21c653] to-[#00a9f4]",
+    color: "bg-[#509e9a]",
     icon: Brush,
     features: ["Content strategy", "Blog writing", "Landing copy", "Lead magnets"],
     benefits: ["More search entry points", "Clearer expertise", "Reusable campaign assets", "Warmer leads"],
@@ -327,14 +328,26 @@ export const services: Service[] = [
   }
 ];
 
-export const heroSlides = services.slice(0, 6).map((service) => ({
-  title: service.title.replace(" & Development", ""),
-  kicker: service.eyebrow,
-  description: service.description,
-  image: service.image,
-  href: `/services/${service.slug}`,
-  color: service.color
-}));
+export const heroSlides = services.slice(0, 6).map((service, index) => {
+  const metrics = [
+    { value: "94", label: "Average launch performance score across recent website builds." },
+    { value: "3.2x", label: "Increase in qualified organic visibility after technical SEO fixes." },
+    { value: "68%", label: "Lower lead acquisition cost after campaign and landing page alignment." },
+    { value: "45%", label: "Higher monthly engagement from consistent social content systems." },
+    { value: "30d", label: "Typical timeline for a practical brand kit and launch asset rollout." },
+    { value: "28%", label: "Fewer form and onboarding drop-offs after UX flow improvements." }
+  ];
+
+  return {
+    title: service.title.replace(" & Development", ""),
+    kicker: service.eyebrow,
+    description: service.description,
+    image: service.image,
+    href: `/services/${service.slug}`,
+    color: service.color,
+    metric: metrics[index]
+  };
+});
 
 export const clients = ["Auro Labs", "Bayline Studio", "Tamil Cloud", "Maison Pondy", "Nila Foods", "Kala Collective"];
 

@@ -15,17 +15,17 @@ export function Loader() {
     <AnimatePresence>
       {show && (
         <motion.div
-          className="fixed inset-0 z-[100] grid place-items-center bg-[#fffdfa]"
+          className="fixed inset-0 z-[100] grid place-items-center bg-[#f8fbfd]"
           exit={{ y: "-100%" }}
           transition={{ duration: 0.7, ease: [0.76, 0, 0.24, 1] }}
         >
           <div className="relative">
             <motion.div
-              className="absolute -inset-8 rounded-full bg-gradient-to-r from-[#006df2] via-[#ffb000] to-[#ec006f] blur-2xl"
-              animate={{ rotate: 360, scale: [1, 1.14, 1] }}
+              className="absolute -inset-8 rounded-md bg-[#dff4ef]"
+              animate={{ scale: [1, 1.08, 1] }}
               transition={{ repeat: Infinity, duration: 2.2 }}
             />
-            <div className="relative rounded-full bg-[#061632] px-7 py-4 font-display text-xl font-bold text-white">CreativTechie</div>
+            <div className="relative rounded-md bg-[#06345f] px-7 py-4 font-display text-xl font-bold text-white">CreativTechie</div>
           </div>
         </motion.div>
       )}

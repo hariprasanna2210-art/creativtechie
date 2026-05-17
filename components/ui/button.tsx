@@ -11,10 +11,10 @@ type ButtonProps = {
 
 export function Button({ href, children, variant = "primary", className }: ButtonProps) {
   const classes = cn(
-    "focus-ring group inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-6 text-sm font-bold transition duration-300",
-    variant === "primary" && "bg-[#061632] text-white shadow-[0_18px_45px_rgba(6,22,50,0.2)] hover:-translate-y-1 hover:bg-[#006df2]",
-    variant === "light" && "bg-white text-[#061632] shadow-[0_16px_38px_rgba(6,22,50,0.16)] hover:-translate-y-1 hover:text-[#006df2]",
-    variant === "ghost" && "border border-[#061632]/15 bg-white/55 text-[#061632] hover:border-[#006df2] hover:bg-white",
+    "focus-ring group inline-flex min-h-11 items-center justify-center gap-2 rounded-md px-5 text-sm font-semibold transition duration-300",
+    variant === "primary" && "bg-[#06345f] text-white shadow-sm hover:bg-[#0077b6]",
+    variant === "light" && "bg-white text-[#06345f] shadow-sm hover:text-[#0077b6]",
+    variant === "ghost" && "border border-[#06345f]/15 bg-white/55 text-[#06345f] hover:border-[#0077b6] hover:bg-white",
     className
   );
 
