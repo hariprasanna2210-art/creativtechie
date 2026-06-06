@@ -3,8 +3,9 @@ import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { PortfolioGallery } from "@/components/portfolio/portfolio-gallery";
 
 export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "Explore selected CreativTechie projects across web, apps, branding, commerce and marketing."
+  title: "Portfolio of Websites, Branding, Apps & Marketing",
+  description: "Explore CreativTechie projects across web design, apps, branding, e-commerce, SEO and digital marketing for business growth.",
+  alternates: { canonical: "/portfolio" }
 };
 
 export default function PortfolioPage() {

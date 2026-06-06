@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import Script from "next/script";
 import { notFound } from "next/navigation";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { services } from "@/lib/data";
 import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { FAQ } from "@/components/ui/faq";
+import { absoluteUrl, breadcrumbSchema, faqSchema, serviceSchema, site } from "@/lib/seo";
 
 type Props = { params: { slug: string } };
 
@@ -21,7 +23,12 @@ export function generateMetadata({ params }: Props): Metadata {
     title: `${service.title} in Puducherry`,
     description: `${service.description} CreativTechie serves Puducherry, Pondicherry, Tamil Nadu and India.`,
     alternates: { canonical: `/services/${service.slug}` },
-    openGraph: { title: `${service.title} | CreativTechie`, description: service.description, images: [service.image] }
+    openGraph: {
+      title: `${service.title} in Puducherry, Pondicherry & Tamil Nadu | CreativTechie`,
+      description: service.description,
+      images: [service.image],
+      url: `/services/${service.slug}`
+    }
   };
 }
 
@@ -30,10 +37,20 @@ export default function ServicePage({ params }: Props) {
   if (!service) notFound();
   const Icon = service.icon;
   const related = services.filter((item) => service.related.includes(item.title));
+  const schema = [
+    serviceSchema(service.slug),
+    faqSchema(service.faqs),
+    breadcrumbSchema([
+      { name: "Home", url: site.url },
+      { name: "Services", url: absoluteUrl("/services") },
+      { name: service.title, url: absoluteUrl(`/services/${service.slug}`) }
+    ])
+  ].filter(Boolean);
 
   return (
     <>
-      <Breadcrumbs items={[{ label: "Services" }, { label: service.title }]} />
+      <Script id="service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <Breadcrumbs items={[{ label: "Services", href: "/services" }, { label: service.title }]} />
       <section className="container grid gap-12 pb-20 pt-10 lg:grid-cols-[0.9fr_1.1fr]">
         <div>
           <p className="text-sm font-black uppercase tracking-[0.25em] text-[#0077b6]">{service.eyebrow}</p>

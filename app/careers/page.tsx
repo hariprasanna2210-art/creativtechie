@@ -5,7 +5,8 @@ import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = {
   title: "Careers",
-  description: "Join CreativTechie, a premium digital agency in Puducherry."
+  description: "Join CreativTechie, a digital agency in Puducherry hiring designers, developers, SEO strategists and writers.",
+  alternates: { canonical: "/careers" }
 };
 
 export default function CareersPage() {

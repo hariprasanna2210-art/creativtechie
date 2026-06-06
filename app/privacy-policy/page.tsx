@@ -3,7 +3,8 @@ import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: "CreativTechie privacy policy."
+  description: "CreativTechie privacy policy.",
+  alternates: { canonical: "/privacy-policy" }
 };
 
 export default function PrivacyPage() {

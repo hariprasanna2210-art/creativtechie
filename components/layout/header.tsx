@@ -36,9 +36,9 @@ export function Header() {
         <nav className="hidden items-center gap-5 text-sm font-bold xl:flex 2xl:gap-7">
           <Link href="/" className="hover:text-[#0077b6]">Home</Link>
           <div onMouseEnter={() => setServicesOpen(true)} onMouseLeave={() => setServicesOpen(false)} className="relative">
-            <button className="flex items-center gap-1 hover:text-[#0077b6]">
+            <Link href="/services" className="flex items-center gap-1 hover:text-[#0077b6]">
               Services <ChevronDown className="h-4 w-4" />
-            </button>
+            </Link>
             <AnimatePresence>
               {servicesOpen && (
                 <motion.div
@@ -79,6 +79,8 @@ export function Header() {
                 <button onClick={() => setMobile(false)} className="grid h-10 w-10 place-items-center rounded-md bg-[#edf5f8]" aria-label="Close menu"><X className="h-5 w-5" /></button>
               </div>
               <div className="grid gap-3">
+                <Link onClick={() => setMobile(false)} href="/services" className="rounded-md bg-[#eaf6ff] px-4 py-3 font-bold">Services</Link>
+                <Link onClick={() => setMobile(false)} href="/locations" className="rounded-md bg-[#e7f7ed] px-4 py-3 font-bold">Locations</Link>
                 {navLinks.map((link) => <Link onClick={() => setMobile(false)} key={link.href} href={link.href} className="rounded-md bg-[#eaf6ff] px-4 py-3 font-bold">{link.label}</Link>)}
                 <p className="mt-4 text-xs font-black uppercase tracking-[0.22em] text-[#52616f]">Services</p>
                 {services.map((service) => <Link onClick={() => setMobile(false)} key={service.slug} href={`/services/${service.slug}`} className="border-b border-[#06345f]/10 py-3 font-display font-bold">{service.title}</Link>)}

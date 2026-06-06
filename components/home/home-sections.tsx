@@ -84,6 +84,35 @@ export function HomeSections() {
         </div>
       </section>
 
+      <section className="bg-[#eef8fc] py-24">
+        <div className="container grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">
+          <div data-reveal>
+            <p className="text-sm font-black uppercase tracking-[0.25em] text-[#0077b6]">SEO and AI visibility</p>
+            <h2 className="mt-4 font-display text-4xl font-black leading-tight md:text-5xl">Built for Google, local search and AI answers.</h2>
+            <p className="mt-5 text-lg leading-8 text-[#34495e]">
+              We help Puducherry, Pondicherry and Tamil Nadu businesses become easier to discover with entity-first SEO, structured data, zero-click content, performance checks and AI-readable service pages.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <Button href="/services" variant="ghost">Explore SEO Services</Button>
+              <Button href="/locations" variant="ghost">View Service Areas</Button>
+            </div>
+          </div>
+          <div className="grid gap-4 md:grid-cols-2">
+            {[
+              "Entity-first optimization for your business, services, locations and proof points.",
+              "AI and LLM visibility with clear summaries, schema and crawlable service facts.",
+              "Zero-click readiness through concise answers, FAQ structure and helpful local content.",
+              "Performance metrics covering page speed, index health, rich previews and enquiry quality."
+            ].map((item) => (
+              <div key={item} data-reveal className="rounded-lg bg-white p-6 shadow-sm">
+                <Check className="mb-5 h-6 w-6 text-[#22b45a]" />
+                <p className="font-display text-xl font-black leading-7">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="bg-[#06345f] py-24 text-white">
         <div className="container">
           <div data-reveal className="max-w-3xl">

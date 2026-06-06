@@ -6,8 +6,9 @@ import { stats } from "@/lib/data";
 import { Counter } from "@/components/home/counter";
 
 export const metadata: Metadata = {
-  title: "About Us",
-  description: "Meet CreativTechie, a premium digital agency based in Puducherry, India."
+  title: "About Our Puducherry Digital Agency",
+  description: "Meet CreativTechie, a Puducherry digital agency helping Pondicherry and Tamil Nadu businesses with web design, SEO, branding, marketing and AI automation.",
+  alternates: { canonical: "/about" }
 };
 
 export default function AboutPage() {

@@ -5,26 +5,61 @@ import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
 import { Loader } from "@/components/ui/loader";
 import { PageTransition } from "@/components/ui/page-transition";
+import { localKeywords, site } from "@/lib/seo";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
 const poppins = Poppins({ subsets: ["latin"], weight: ["500", "600", "700", "800"], variable: "--font-poppins", display: "swap" });
 const space = Space_Grotesk({ subsets: ["latin"], variable: "--font-space", display: "swap" });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://creativtechie.com"),
+  metadataBase: new URL(site.url),
+  applicationName: site.name,
+  authors: [{ name: site.name, url: site.url }],
+  creator: site.name,
+  publisher: site.name,
+  category: "Digital Agency",
   title: {
-    default: "CreativTechie | Premium Web Design & Digital Agency in Puducherry",
+    default: "CreativTechie | Web Design, SEO & Digital Agency in Puducherry",
     template: "%s | CreativTechie"
   },
-  description: "CreativTechie is a premium web design, SEO, branding, AI and digital marketing agency based in Puducherry, India.",
-  keywords: ["CreativTechie", "web design Puducherry", "SEO Pondicherry", "digital agency Tamil Nadu", "branding agency India"],
+  description: "CreativTechie helps Puducherry, Pondicherry and Tamil Nadu businesses grow with web design, SEO, branding, digital marketing, apps and AI automation.",
+  keywords: ["CreativTechie", ...localKeywords],
+  referrer: "origin-when-cross-origin",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false
+  },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico"
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1
+    }
+  },
   openGraph: {
-    title: "CreativTechie - Premium Digital Agency in Puducherry",
-    description: "Websites, apps, SEO, branding and automation for ambitious Indian and global brands.",
-    url: "https://creativtechie.com",
-    siteName: "CreativTechie",
+    title: "CreativTechie - Web Design, SEO & AI-Ready Digital Agency",
+    description: "Websites, SEO, branding, marketing and AI automation for Puducherry, Pondicherry and Tamil Nadu businesses.",
+    url: site.url,
+    siteName: site.name,
     locale: "en_IN",
-    type: "website"
+    type: "website",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "CreativTechie digital agency" }]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CreativTechie - Web Design, SEO & Digital Agency",
+    description: "Local SEO, fast websites, branding, marketing and AI automation for Puducherry and Tamil Nadu businesses.",
+    images: ["/opengraph-image"]
   },
   alternates: { canonical: "/" }
 };

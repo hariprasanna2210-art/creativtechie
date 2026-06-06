@@ -3,7 +3,8 @@ import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Terms & Conditions",
-  description: "CreativTechie terms and conditions."
+  description: "CreativTechie terms and conditions.",
+  alternates: { canonical: "/terms-conditions" }
 };
 
 export default function TermsPage() {

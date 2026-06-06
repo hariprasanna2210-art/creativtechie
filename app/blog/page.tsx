@@ -3,8 +3,9 @@ import { Breadcrumbs } from "@/components/ui/breadcrumbs";
 import { BlogList } from "@/components/blog/blog-list";
 
 export const metadata: Metadata = {
-  title: "Blog",
-  description: "CreativTechie articles on web design, SEO, branding, digital marketing and AI automation."
+  title: "Blog on Web Design, SEO, Branding & AI Automation",
+  description: "CreativTechie articles for business owners on web design, local SEO, branding, digital marketing, AI automation and search visibility.",
+  alternates: { canonical: "/blog" }
 };
 
 export default function BlogPage() {

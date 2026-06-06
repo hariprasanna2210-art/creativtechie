@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Send } from "lucide-react";
 import { navLinks, services } from "@/lib/data";
 import { Button } from "@/components/ui/button";
+import { localAreas } from "@/lib/seo";
 
 export function Footer() {
   return (
@@ -45,6 +46,7 @@ export function Footer() {
           <div>
             <p className="font-bold">Services</p>
             <div className="mt-4 grid gap-3 text-white/70">
+              <Link href="/services" className="hover:text-[#ffd23f]">All Services</Link>
               {services.slice(0, 8).map((service) => <Link key={service.slug} href={`/services/${service.slug}`} className="hover:text-[#ffd23f]">{service.title}</Link>)}
             </div>
           </div>
@@ -52,8 +54,14 @@ export function Footer() {
             <p className="font-bold">Contact</p>
             <div className="mt-4 grid gap-4 text-white/70">
               <p className="flex gap-3"><MapPin className="mt-1 h-4 w-4 text-[#ffd23f]" /> Puducherry, India. Serving Pondicherry, Tamil Nadu and global teams.</p>
-              <p className="flex gap-3"><Mail className="mt-1 h-4 w-4 text-[#22b45a]" /> hello@creativtechie.com</p>
+              <p className="flex gap-3"><Mail className="mt-1 h-4 w-4 text-[#22b45a]" /> creativtechie@gmail.com</p>
               <p className="flex gap-3"><Phone className="mt-1 h-4 w-4 text-[#22b45a]" /> +91 7418120053 / 9385870053</p>
+              <div className="grid gap-2">
+                <Link href="/locations" className="font-bold text-white hover:text-[#ffd23f]">Service Areas</Link>
+                {localAreas.map((area) => (
+                  <Link key={area.slug} href={`/locations/${area.slug}`} className="hover:text-[#ffd23f]">{area.name}</Link>
+                ))}
+              </div>
             </div>
           </div>
         </div>
