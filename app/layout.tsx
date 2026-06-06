@@ -20,10 +20,10 @@ export const metadata: Metadata = {
   publisher: site.name,
   category: "Digital Agency",
   title: {
-    default: "CreativTechie | Web Design, SEO & Digital Agency in Puducherry",
+    default: "CreativTechie | Website Design Company in Pondicherry",
     template: "%s | CreativTechie"
   },
-  description: "CreativTechie helps Puducherry, Pondicherry and Tamil Nadu businesses grow with web design, SEO, branding, digital marketing, apps and AI automation.",
+  description: "CreativTechie is a website design company in Pondicherry offering web development, SEO, local SEO, digital marketing, WordPress, ecommerce websites and AI automation for Pondicherry, Puducherry and Tamil Nadu businesses.",
   keywords: ["CreativTechie", ...localKeywords],
   referrer: "origin-when-cross-origin",
   formatDetection: {
@@ -48,19 +48,28 @@ export const metadata: Metadata = {
     }
   },
   openGraph: {
-    title: "CreativTechie - Web Design, SEO & AI-Ready Digital Agency",
-    description: "Websites, SEO, branding, marketing and AI automation for Puducherry, Pondicherry and Tamil Nadu businesses.",
+    title: "CreativTechie - Website Design Company in Pondicherry",
+    description: "Website design, SEO, digital marketing, WordPress and ecommerce websites for Pondicherry and Tamil Nadu businesses.",
     url: site.url,
     siteName: site.name,
     locale: "en_IN",
     type: "website",
-    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "CreativTechie digital agency" }]
+    images: [
+      {
+        url: site.image,
+        secureUrl: site.image,
+        width: 1200,
+        height: 630,
+        alt: "CreativTechie website design, SEO and digital marketing agency in Pondicherry",
+        type: "image/png"
+      }
+    ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "CreativTechie - Web Design, SEO & Digital Agency",
-    description: "Local SEO, fast websites, branding, marketing and AI automation for Puducherry and Tamil Nadu businesses.",
-    images: ["/opengraph-image"]
+    title: "CreativTechie - Website Design Company in Pondicherry",
+    description: "Website design, SEO, WordPress, ecommerce and digital marketing for Pondicherry and Tamil Nadu businesses.",
+    images: [site.image]
   },
   alternates: { canonical: "/" }
 };
@@ -69,13 +78,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en-IN">
       <body className={`${inter.variable} ${poppins.variable} ${space.variable}`}>
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-YR7F2TKVH1" strategy="afterInteractive" />
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-Y4KXMWFNFP" strategy="afterInteractive" />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-YR7F2TKVH1');
+            gtag('config', 'G-Y4KXMWFNFP');
           `}
         </Script>
         <Loader />

@@ -27,10 +27,10 @@ export function HomeSections() {
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
           <div data-reveal>
             <p className="text-sm font-black uppercase tracking-[0.25em] text-[#22b45a]">About CreativTechie</p>
-            <h2 className="mt-4 font-display text-5xl font-black leading-tight text-balance md:text-6xl">A Puducherry studio with startup speed and agency craft.</h2>
+            <h2 className="mt-4 font-display text-5xl font-black leading-tight text-balance md:text-6xl">A Pondicherry website design company with startup speed and agency craft.</h2>
           </div>
           <div data-reveal className="grid gap-7">
-            <p className="text-xl leading-9 text-[#34495e]">We build websites, campaigns, brand systems and automation that help businesses look credible, move faster and sell with more confidence. Our work blends coastal calm with bright, decisive execution.</p>
+            <p className="text-xl leading-9 text-[#34495e]">We build websites, web development projects, SEO systems, digital marketing campaigns, WordPress sites, ecommerce stores, brand systems and automation that help Pondicherry and Tamil Nadu businesses look credible, move faster and sell with more confidence.</p>
             <div className="grid gap-4 sm:grid-cols-2">
               {stats.map((stat) => (
                 <div key={stat.label} className="rounded-lg border border-[#06345f]/10 bg-[#fff7dc] p-6">
@@ -90,7 +90,7 @@ export function HomeSections() {
             <p className="text-sm font-black uppercase tracking-[0.25em] text-[#0077b6]">SEO and AI visibility</p>
             <h2 className="mt-4 font-display text-4xl font-black leading-tight md:text-5xl">Built for Google, local search and AI answers.</h2>
             <p className="mt-5 text-lg leading-8 text-[#34495e]">
-              We help Puducherry, Pondicherry and Tamil Nadu businesses become easier to discover with entity-first SEO, structured data, zero-click content, performance checks and AI-readable service pages.
+              We help Puducherry, Pondicherry and Tamil Nadu businesses become easier to discover for searches like website design company in Pondicherry, SEO company in Pondicherry, local SEO services in Pondicherry and digital marketing company in Tamil Nadu.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button href="/services" variant="ghost">Explore SEO Services</Button>

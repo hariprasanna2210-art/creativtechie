@@ -194,6 +194,25 @@ export const services: Service[] = [
     ]
   },
   {
+    title: "WordPress Development",
+    slug: "wordpress-development",
+    eyebrow: "Editable business websites",
+    description: "WordPress websites that are easy to manage, quick to load and ready for local SEO.",
+    longDescription: "We build and improve WordPress websites for Pondicherry and Tamil Nadu businesses that need clean design, reliable editing, sensible plugin choices, speed, security and search-friendly page structure.",
+    image: image("photo-1498050108023-c5249f4df085"),
+    color: "bg-[#3f7cac]",
+    icon: Code2,
+    features: ["Custom WordPress websites", "Theme setup", "Plugin cleanup", "Speed and SEO structure"],
+    benefits: ["Easy content updates", "Cleaner admin workflows", "Better local search signals", "Lower plugin risk"],
+    process: ["Website audit", "Content and page planning", "WordPress build", "Speed and security checks", "Launch support"],
+    tech: ["WordPress", "WooCommerce", "Elementor", "ACF", "Cloudflare"],
+    related: ["SEO Services", "Website Maintenance", "E-Commerce Development"],
+    faqs: [
+      { q: "Can you build a new WordPress website?", a: "Yes. We create WordPress websites for businesses that want an editable CMS with strong design and SEO foundations." },
+      { q: "Can you fix a slow WordPress site?", a: "Yes. We review hosting, plugins, images, theme code and caching before making performance improvements." }
+    ]
+  },
+  {
     title: "Custom Software Development",
     slug: "custom-software-development",
     eyebrow: "Operational software",

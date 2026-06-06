@@ -70,7 +70,8 @@ export default function LocationPage({ params }: Props) {
             url: absoluteUrl(`/services/${service.slug}`)
           }
         }))
-      }
+      },
+      mentions: area.searchIntents
     }
   ];
 
@@ -87,6 +88,13 @@ export default function LocationPage({ params }: Props) {
             </p>
             <h1 className="mt-4 max-w-4xl font-display text-4xl font-black leading-tight md:text-6xl">{area.title}</h1>
             <p className="mt-6 text-xl leading-9 text-[#34495e]">{area.intro}</p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              {area.searchIntents.slice(0, 5).map((intent) => (
+                <span key={intent} className="rounded-md bg-white px-4 py-3 text-sm font-black text-[#06345f] shadow-sm">
+                  {intent}
+                </span>
+              ))}
+            </div>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button href="/contact">Get Local SEO Plan</Button>
               <Button href="/services" variant="ghost">Explore Services</Button>
@@ -108,6 +116,26 @@ export default function LocationPage({ params }: Props) {
                 </p>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="container py-24">
+        <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
+          <div>
+            <p className="text-sm font-black uppercase tracking-[0.25em] text-[#0077b6]">Local search intent</p>
+            <h2 className="mt-4 font-display text-4xl font-black md:text-5xl">Pages planned around real buyer searches.</h2>
+            <p className="mt-5 text-lg leading-8 text-[#34495e]">
+              Each search phrase connects to useful proof, service detail, FAQs, technical signals and a clear enquiry path for {area.name} businesses.
+            </p>
+          </div>
+          <div className="grid gap-4 md:grid-cols-2">
+            {area.searchIntents.map((intent) => (
+              <p key={intent} className="rounded-lg border border-[#06345f]/10 bg-white p-5 font-bold leading-7 shadow-sm">
+                <BadgeCheck className="mb-4 h-6 w-6 text-[#22b45a]" />
+                {intent}
+              </p>
+            ))}
           </div>
         </div>
       </section>

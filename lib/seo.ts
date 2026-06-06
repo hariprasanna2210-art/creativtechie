@@ -5,13 +5,13 @@ export const site = {
   legalName: "CreativTechie",
   url: "https://creativtechie.com",
   logo: "https://creativtechie.com/creativtechie-logo.png",
-  image: "https://creativtechie.com/opengraph-image",
+  image: "https://creativtechie.com/social-preview.png",
   email: "creativtechie@gmail.com",
   telephone: "+91 7418120053",
   alternateTelephone: "+91 9385870053",
   foundingLocation: "Puducherry, India",
   description:
-    "CreativTechie is a Puducherry digital agency for web design, SEO, branding, digital marketing, apps and AI automation.",
+    "CreativTechie is a Pondicherry and Puducherry digital agency for website design, web development, SEO, digital marketing, WordPress, ecommerce, apps and AI automation.",
   sameAs: [
     "https://www.instagram.com/creativtechie",
     "https://www.linkedin.com/company/creativtechie"
@@ -26,9 +26,16 @@ export const localAreas = [
     region: "Puducherry",
     title: "Web Design, SEO & Digital Marketing Agency in Puducherry",
     description:
-      "CreativTechie helps Puducherry business owners build faster websites, improve local SEO, run digital campaigns and adopt practical AI automation.",
+      "CreativTechie helps Puducherry business owners build faster websites, improve local SEO, run digital campaigns, develop ecommerce stores and adopt practical AI automation.",
     intro:
-      "For Puducherry founders, clinics, hotels, restaurants, education brands, shops and service businesses, we build a digital presence that feels credible, loads fast and turns local searches into enquiries."
+      "For Puducherry founders, clinics, hotels, restaurants, education brands, shops and service businesses, we build a digital presence that feels credible, loads fast and turns local searches into enquiries.",
+    searchIntents: [
+      "Website design company in Pondicherry",
+      "Web development company in Pondicherry",
+      "SEO company in Pondicherry",
+      "Digital marketing agency in Pondicherry",
+      "Local SEO services in Pondicherry"
+    ]
   },
   {
     slug: "pondicherry",
@@ -37,9 +44,16 @@ export const localAreas = [
     region: "Puducherry",
     title: "Website Design & SEO Services in Pondicherry",
     description:
-      "CreativTechie serves Pondicherry businesses with website design, local SEO, branding, marketing, e-commerce and AI-ready content systems.",
+      "CreativTechie serves Pondicherry businesses with website design, web development, local SEO, digital marketing, WordPress development, ecommerce websites and AI-ready content systems.",
     intro:
-      "People still search both Pondicherry and Puducherry. We support local businesses across both search patterns with clear service pages, structured data, fast pages and content that answers real customer questions."
+      "People still search both Pondicherry and Puducherry. We support local businesses across both search patterns with clear service pages, structured data, fast pages and content that answers real customer questions.",
+    searchIntents: [
+      "Best website designers in Pondicherry",
+      "WordPress development company in Pondicherry",
+      "Ecommerce website development in Pondicherry",
+      "Website design company in Pondicherry",
+      "Digital marketing agency in Pondicherry"
+    ]
   },
   {
     slug: "tamil-nadu",
@@ -50,19 +64,34 @@ export const localAreas = [
     description:
       "CreativTechie helps Tamil Nadu businesses grow online with web design, SEO, digital marketing, branding, software and AI automation.",
     intro:
-      "For Tamil Nadu companies that need sharper online visibility, we combine strategy, design, engineering and search content into one practical growth system."
+      "For Tamil Nadu companies that need sharper online visibility, we combine strategy, design, engineering and search content into one practical growth system.",
+    searchIntents: [
+      "Website development company in Tamil Nadu",
+      "Digital marketing company in Tamil Nadu",
+      "SEO services in Tamil Nadu",
+      "Web design company in Tamil Nadu",
+      "Ecommerce website development in Tamil Nadu"
+    ]
   }
 ];
 
 export const localKeywords = [
+  "Website Design Company in Pondicherry",
+  "Web Development Company in Pondicherry",
+  "SEO Company in Pondicherry",
+  "Digital Marketing Agency in Pondicherry",
+  "WordPress Development Company in Pondicherry",
+  "Ecommerce Website Development in Pondicherry",
+  "Best Website Designers in Pondicherry",
+  "Local SEO Services in Pondicherry",
+  "Website Development Company in Tamil Nadu",
+  "Digital Marketing Company in Tamil Nadu",
   "web design Puducherry",
-  "website development Pondicherry",
+  "website development Puducherry",
   "SEO services Puducherry",
-  "digital marketing agency Pondicherry",
+  "digital marketing agency Puducherry",
   "branding agency Tamil Nadu",
-  "AI automation agency India",
-  "e-commerce website Puducherry",
-  "local SEO Tamil Nadu"
+  "AI automation agency India"
 ];
 
 export function absoluteUrl(path = "") {
@@ -107,7 +136,14 @@ export function localBusinessSchema() {
       "LLM visibility",
       "Entity-first optimization",
       "Zero-click search optimization",
-      "Technical SEO"
+      "Technical SEO",
+      "Website Design Company in Pondicherry",
+      "Web Development Company in Pondicherry",
+      "SEO Company in Pondicherry",
+      "Digital Marketing Agency in Pondicherry",
+      "WordPress Development Company in Pondicherry",
+      "Ecommerce Website Development in Pondicherry",
+      "Local SEO Services in Pondicherry"
     ],
     makesOffer: services.map((service) => ({
       "@type": "Offer",

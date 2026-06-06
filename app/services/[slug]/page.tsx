@@ -12,6 +12,44 @@ import { absoluteUrl, breadcrumbSchema, faqSchema, serviceSchema, site } from "@
 
 type Props = { params: { slug: string } };
 
+const serviceSeo: Record<string, { title: string; description: string; keywords: string[] }> = {
+  "web-design-development": {
+    title: "Website Design Company in Pondicherry",
+    description:
+      "CreativTechie is a website design and web development company in Pondicherry building fast, mobile-friendly, SEO-ready websites for local businesses in Pondicherry, Puducherry and Tamil Nadu.",
+    keywords: [
+      "Website Design Company in Pondicherry",
+      "Web Development Company in Pondicherry",
+      "Best Website Designers in Pondicherry",
+      "Website Development Company in Tamil Nadu"
+    ]
+  },
+  "seo-services": {
+    title: "SEO Company in Pondicherry",
+    description:
+      "SEO company in Pondicherry offering technical SEO, local SEO services, content planning, Google Business Profile recommendations and search-ready website improvements.",
+    keywords: ["SEO Company in Pondicherry", "Local SEO Services in Pondicherry", "SEO services Puducherry", "SEO services in Tamil Nadu"]
+  },
+  "digital-marketing": {
+    title: "Digital Marketing Agency in Pondicherry",
+    description:
+      "Digital marketing agency in Pondicherry for local campaigns, landing pages, SEO, Google Ads, social media and measurable lead generation across Pondicherry and Tamil Nadu.",
+    keywords: ["Digital Marketing Agency in Pondicherry", "Digital Marketing Company in Tamil Nadu", "digital marketing agency Puducherry"]
+  },
+  "e-commerce-development": {
+    title: "Ecommerce Website Development in Pondicherry",
+    description:
+      "Ecommerce website development in Pondicherry for product brands, retail stores and service businesses that need fast storefronts, payment setup and SEO-ready product pages.",
+    keywords: ["Ecommerce Website Development in Pondicherry", "e-commerce website Puducherry", "Ecommerce website development in Tamil Nadu"]
+  },
+  "wordpress-development": {
+    title: "WordPress Development Company in Pondicherry",
+    description:
+      "WordPress development company in Pondicherry for editable business websites, WooCommerce stores, speed optimization, plugin cleanup and SEO-friendly page structure.",
+    keywords: ["WordPress Development Company in Pondicherry", "WordPress website development Puducherry", "WordPress development Tamil Nadu"]
+  }
+};
+
 export function generateStaticParams() {
   return services.map((service) => ({ slug: service.slug }));
 }
@@ -19,14 +57,16 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: Props): Metadata {
   const service = services.find((item) => item.slug === params.slug);
   if (!service) return {};
+  const seo = serviceSeo[service.slug];
   return {
-    title: `${service.title} in Puducherry`,
-    description: `${service.description} CreativTechie serves Puducherry, Pondicherry, Tamil Nadu and India.`,
+    title: seo?.title ?? `${service.title} in Puducherry`,
+    description: seo?.description ?? `${service.description} CreativTechie serves Puducherry, Pondicherry, Tamil Nadu and India.`,
+    keywords: seo?.keywords,
     alternates: { canonical: `/services/${service.slug}` },
     openGraph: {
-      title: `${service.title} in Puducherry, Pondicherry & Tamil Nadu | CreativTechie`,
-      description: service.description,
-      images: [service.image],
+      title: `${seo?.title ?? service.title} | CreativTechie`,
+      description: seo?.description ?? service.description,
+      images: [site.image],
       url: `/services/${service.slug}`
     }
   };
@@ -56,6 +96,11 @@ export default function ServicePage({ params }: Props) {
           <p className="text-sm font-black uppercase tracking-[0.25em] text-[#0077b6]">{service.eyebrow}</p>
           <h1 className="mt-4 font-display text-5xl font-black leading-tight text-balance md:text-6xl">{service.title}</h1>
           <p className="mt-6 text-xl leading-9 text-[#34495e]">{service.longDescription}</p>
+          {serviceSeo[service.slug] ? (
+            <p className="mt-5 text-lg leading-8 text-[#52616f]">
+              CreativTechie supports searches for {serviceSeo[service.slug].keywords.slice(0, 3).join(", ")} with useful service content, technical SEO, local signals and conversion-focused page structure.
+            </p>
+          ) : null}
           <div className="mt-8 flex flex-wrap gap-4">
             <Button href="/contact">Talk to the Studio</Button>
             <Button href="/portfolio" variant="ghost">See Work</Button>

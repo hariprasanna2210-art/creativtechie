@@ -8,14 +8,14 @@ import { services } from "@/lib/data";
 import { absoluteUrl, breadcrumbSchema, localAreas, localKeywords, site } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Services for Web Design, SEO, Marketing & AI Automation",
+  title: "Website Design, SEO & Digital Marketing Services in Pondicherry",
   description:
-    "Explore CreativTechie services for Puducherry, Pondicherry and Tamil Nadu businesses: web design, SEO, digital marketing, branding, apps, software and AI automation.",
+    "Explore CreativTechie services for Pondicherry, Puducherry and Tamil Nadu businesses: website design, web development, SEO, local SEO, digital marketing, WordPress, ecommerce, branding, apps and AI automation.",
   keywords: localKeywords,
   alternates: { canonical: "/services" },
   openGraph: {
-    title: "CreativTechie Services",
-    description: "Web design, SEO, branding, marketing, software and AI automation for South Indian businesses.",
+    title: "CreativTechie Website Design, SEO & Digital Marketing Services",
+    description: "Website design, SEO, local SEO, WordPress, ecommerce, digital marketing, software and AI automation for South Indian businesses.",
     url: "/services"
   }
 };
