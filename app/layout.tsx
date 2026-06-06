@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Poppins, Space_Grotesk } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
@@ -68,6 +69,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en-IN">
       <body className={`${inter.variable} ${poppins.variable} ${space.variable}`}>
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-YR7F2TKVH1" strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-YR7F2TKVH1');
+          `}
+        </Script>
         <Loader />
         <Header />
         <PageTransition>{children}</PageTransition>
