@@ -24,6 +24,9 @@ export default function ContactPage() {
             <p className="flex gap-3 rounded-lg bg-[#e7f7ed] p-5 font-bold"><Phone className="h-5 w-5 text-[#22b45a]" /> +91 7418120053 / 9385870053</p>
           </div>
           <div className="mt-6"><Button href="https://wa.me/917418120053" variant="ghost">Chat on WhatsApp</Button></div>
+          <p className="mt-5 leading-7 text-[#52616f]">
+            Planning a new site? See our <a href="/website-design-pondicherry/" className="font-bold text-[#0077b6] underline decoration-[#0077b6]/30 underline-offset-4">Web Design Services in Pondicherry</a> before sending your enquiry.
+          </p>
         </div>
         <ContactForm />
       </section>

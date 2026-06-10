@@ -97,6 +97,9 @@ export default function ServicesPage() {
           <div>
             <p className="text-sm font-black uppercase tracking-[0.25em] text-[#22b45a]">Search visibility</p>
             <h2 className="mt-4 font-display text-4xl font-black md:text-5xl">Built for Google, AI answers and human decisions.</h2>
+            <p className="mt-5 text-lg leading-8 text-[#34495e]">
+              Looking for a dedicated local web page? Visit our <Link href="/website-design-pondicherry/" className="font-bold text-[#0077b6] underline decoration-[#0077b6]/30 underline-offset-4">Website Design Company in Pondicherry</Link> page for business website, WordPress and ecommerce website details.
+            </p>
           </div>
           <div className="grid gap-4 md:grid-cols-2">
             {[
@@ -123,6 +126,7 @@ export default function ServicesPage() {
           </p>
           <div className="mt-8">
             <Button href="/contact" variant="light">Request SEO Audit</Button>
+            <Button href="/website-design-pondicherry/" variant="light" className="ml-0 mt-3 sm:ml-3 sm:mt-0">Web Design Services in Pondicherry</Button>
           </div>
         </div>
       </section>

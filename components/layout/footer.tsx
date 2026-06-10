@@ -47,6 +47,7 @@ export function Footer() {
             <p className="font-bold">Services</p>
             <div className="mt-4 grid gap-3 text-white/70">
               <Link href="/services" className="hover:text-[#ffd23f]">All Services</Link>
+              <Link href="/website-design-pondicherry/" className="hover:text-[#ffd23f]">Website Design Pondicherry</Link>
               {services.slice(0, 8).map((service) => <Link key={service.slug} href={`/services/${service.slug}`} className="hover:text-[#ffd23f]">{service.title}</Link>)}
             </div>
           </div>

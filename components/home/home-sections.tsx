@@ -93,6 +93,7 @@ export function HomeSections() {
               We help Puducherry, Pondicherry and Tamil Nadu businesses become easier to discover for searches like website design company in Pondicherry, SEO company in Pondicherry, local SEO services in Pondicherry and digital marketing company in Tamil Nadu.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
+              <Button href="/website-design-pondicherry/" variant="ghost">Website Design Pondicherry</Button>
               <Button href="/services" variant="ghost">Explore SEO Services</Button>
               <Button href="/locations" variant="ghost">View Service Areas</Button>
             </div>
@@ -231,7 +232,10 @@ export function HomeSections() {
           <div className="relative max-w-3xl">
             <p className="inline-flex items-center gap-2 rounded-md bg-white/15 px-4 py-2 text-sm font-bold"><Check className="h-4 w-4" /> Strategy, design, build and growth in one room.</p>
             <h2 className="mt-6 font-display text-4xl font-black leading-tight md:text-5xl">Ready for a website that works as hard as you do?</h2>
-            <div className="mt-8"><Button href="/contact" variant="light">Start With CreativTechie</Button></div>
+            <div className="mt-8 flex flex-wrap gap-4">
+              <Button href="/website-design-pondicherry/" variant="light">Professional Website Design</Button>
+              <Button href="/contact" variant="light">Start With CreativTechie</Button>
+            </div>
           </div>
         </div>
       </section>

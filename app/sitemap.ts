@@ -6,7 +6,7 @@ const baseUrl = "https://creativtechie.com";
 const lastModified = new Date("2026-06-06");
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticPages = ["", "/about", "/services", "/locations", "/portfolio", "/blog", "/contact", "/careers", "/privacy-policy", "/terms-conditions"];
+  const staticPages = ["", "/about", "/services", "/website-design-pondicherry/", "/locations", "/portfolio", "/blog", "/contact", "/careers", "/privacy-policy", "/terms-conditions"];
   return [
     ...staticPages.map((path) => ({
       url: `${baseUrl}${path}`,
